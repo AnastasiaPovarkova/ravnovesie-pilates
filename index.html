@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>РАВНОВЕСИЕ — профессиональная студия пилатеса в Сыктывкаре</title>
+  <link rel="icon" type="image/png" href="images/fav.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="Логотип Равновесие" class="site-logo-img">
+        <div class="logo-text">
+          <span class="logo-title">РАВНОВЕСИЕ</span>
+          <span class="logo-subtitle">пилатес студия</span>
+        </div>
+      </a>
+      <nav class="nav-menu">
+        <a href="#about">О студии</a>
+        <a href="#directions">Направления</a>
+        <a href="#trainer">Тренер</a>
+        <a href="#prices">Цены</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-phone-wrap">
+        <a href="tel:+79042293336" class="header-phone-btn" title="Позвонить">
+          <svg class="phone-icon-svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span class="phone-text">+7 (904) 229-33-36</span>
+        </a>
+      </div>
+      <!-- Гамбургер для мобильных -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Мобильное меню -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" class="mob-link">О студии</a>
+      <a href="#directions" class="mob-link">Направления</a>
+      <a href="#trainer" class="mob-link">Тренер</a>
+      <a href="#prices" class="mob-link">Цены</a>
+      <a href="#contacts" class="mob-link">Контакты</a>
+      <a href="tel:+79042293336" class="mob-phone">+7 (904) 229-33-36</a>
+    </div>
+  </header>
+
+  <!-- Главный экран (Hero) -->
+  <section class="hero">
+    <div class="hero-bg-image" style="background-image: url('images/image.png');"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-tag">ПИЛАТЕС СТУДИЯ • <span class="hero-highlight">СЫКТЫВКАР</span></span>
+        <h1>РАВНОВЕСИЕ</h1>
+        <p class="hero-slogan">Профессиональная студия пилатеса с лучшим оборудованием</p>
+        <p class="hero-desc">Глубокая работа с телом, развитие силы, гибкости и идеальной осанки под руководством эксперта в уютной атмосфере.</p>
+        <a href="#directions" class="btn-primary">Смотреть направления</a>
+        <span class="hero-note">Занятия проходят по предварительной записи</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- О студии -->
+  <section id="about" class="about">
+    <div class="container">
+      <span class="section-subtitle">О СТУДИИ</span>
+      <h2>ПРОСТРАНСТВО ДЛЯ ВАШЕГО РАВНОВЕСИЯ</h2>
+      <div class="about-grid">
+        <p class="about-text">
+          Пилатес студия «Равновесие» в Сыктывкаре — специализированное пространство для людей, стремящихся улучшить здоровье, осанку и качество жизни с помощью методики Polestar Pilates и премиального оборудования.<br><br>
+          Наша миссия — передавать глубокие знания для улучшения самочувствия через безопасное и осознанное движение.
+        </p>
+        <!-- Галерея фото -->
+        <div class="about-gallery">
+          <div class="about-gallery-item"><img src="images/image_3.png" alt="Интерьер студии Равновесие" onclick="openLightbox(this.src)"></div>
+          <div class="about-gallery-item"><img src="images/image_2.png" alt="Оборудование для пилатеса" onclick="openLightbox(this.src)"></div>
+          <div class="about-gallery-item"><img src="images/image.png" alt="Тренировка в студии" onclick="openLightbox(this.src)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Модальное окно для просмотра фото -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="Увеличенное фото">
+  </div>
+
+  <!-- Направления и цены -->
+  <section id="directions" class="prices-section">
+    <div class="container">
+      <span class="section-subtitle">СТОИМОСТЬ</span>
+      <h2 id="prices">НАПРАВЛЕНИЯ И ЦЕНЫ</h2>
+      <div class="cards-grid">
+        <!-- Карточка 1 -->
+        <div class="price-card">
+          <div class="price-card-top">
+            <h3>СТАРТОВАЯ ТРЕНИРОВКА</h3>
+            <div class="price">1 500 ₽</div>
+            <p>Отличный вариант, чтобы познакомиться с пилатесом и оценить эффект.</p>
+            <div id="details-1" class="price-details">
+              <ul>
+                <li>Пробная индивидуальная тренировка — 1 500 рублей.</li>
+              </ul>
+              <p class="privilege-note">Людям пенсионного возраста, инвалидам, лицам с ограниченными возможностями здоровья — скидка 15%.</p>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button class="btn-card" onclick="toggleDetails('details-1', this)">Подробнее</button>
+            <div class="card-action-links" id="actions-1">
+              <a href="tel:+79042293336" class="action-phone-link">Позвонить</a>
+              <a href="https://max.ru" target="_blank" class="action-max-link">Написать в Max</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 2 (Хит) -->
+        <div class="price-card popular">
+          <span class="popular-badge">Хит</span>
+          <div class="price-card-top">
+            <h3>ГРУППОВЫЕ ТРЕНИРОВКИ</h3>
+            <div class="price">600 – 3 000 ₽</div>
+            <p>Эффективные тренировки в мини-группе под руководством опытного тренера.</p>
+            <div id="details-2" class="price-details">
+              <ul>
+                <li>Разовое посещение — 600 рублей.</li>
+                <li>Абонемент на 6 занятий — 3 000 рублей.</li>
+              </ul>
+              <p class="privilege-note">Людям пенсионного возраста, инвалидам, лицам с ограниченными возможностями здоровья — скидка 15%.</p>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button class="btn-card" onclick="toggleDetails('details-2', this)">Подробнее</button>
+            <div class="card-action-links" id="actions-2">
+              <a href="tel:+79042293336" class="action-phone-link">Позвонить</a>
+              <a href="https://max.ru" target="_blank" class="action-max-link">Написать в Max</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="price-card">
+          <div class="price-card-top">
+            <h3>ИНДИВИДУАЛЬНЫЕ</h3>
+            <div class="price">2 000 – 15 000 ₽</div>
+            <p>Программа, составленная персонально под ваши цели и особенности.</p>
+            <div id="details-3" class="price-details">
+              <ul>
+                <li>На проф. оборудовании (1 занятие) — 2 000 рублей.</li>
+                <li>На проф. оборудовании (5 занятий) — 8 500 рублей.</li>
+                <li>На проф. оборудовании (10 занятий) — 15 000 рублей.</li>
+              </ul>
+              <p class="privilege-note">Людям пенсионного возраста, инвалидам, лицам с ограниченными возможностями здоровья — скидка 15%.</p>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button class="btn-card" onclick="toggleDetails('details-3', this)">Подробнее</button>
+            <div class="card-action-links" id="actions-3">
+              <a href="tel:+79042293336" class="action-phone-link">Позвонить</a>
+              <a href="https://max.ru" target="_blank" class="action-max-link">Написать в Max</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Почему выбирают нас с поддержкой свайпа на мобильных -->
+  <section class="why-us">
+    <div class="container why-container">
+      <div class="why-text">
+        <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
+        <ul>
+          <li>Методика Polestar Pilates</li>
+          <li>Опытный сертифицированный тренер</li>
+          <li>Внимание к каждому клиенту</li>
+          <li>Комфортная и уютная атмосфера</li>
+          <li>Гибкий подход и индивидуальные программы</li>
+        </ul>
+      </div>
+      <div class="why-slider-wrapper" id="whySliderWrapper">
+        <div class="why-slides" id="whySlides">
+          <img src="images/image_3.png" alt="Студия пилатеса Равновесие" class="why-slide active">
+          <img src="images/studio2.png" alt="Оборудование студии" class="why-slide">
+          <img src="images/image.png" alt="Занятия пилатесом" class="why-slide">
+          <img src="images/studio1.png" alt="Занятия пилатесом" class="why-slide">
+        </div>
+        <div class="why-slider-controls">
+          <button class="why-prev" onclick="moveSlide(-1)">❮</button>
+          <button class="why-next" onclick="moveSlide(1)">❯</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция Тренера -->
+  <section id="trainer" class="trainer-section">
+    <div class="container">
+      <span class="section-subtitle">ЭКСПЕРТИЗА</span>
+      <h2>ВАШ ТРЕНЕР</h2>
+      <div class="trainer-modern-card">
+        <img src="images/image_2.png" alt="Елена Корякина" class="trainer-modern-img">
+        <div class="trainer-modern-info">
+          <h3>Елена Корякина</h3>
+          <p class="trainer-role">Ведущий инструктор студии</p>
+          <p class="trainer-bio">
+            Профессиональный тренер с многолетним стажем. Помогает бережно и эффективно улучшить осанку, избавиться от болей в спине и развить гибкость через безопасные движения.
+          </p>
+          <ul class="trainer-list">
+            <li>Сертифицированный тренер Polestar Pilates</li>
+            <li>Системный подход и внимание к деталям</li>
+            <li>Индивидуальный подбор упражнений под особенности организма</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция Контакты -->
+  <section id="contacts" class="contacts-only-section">
+    <div class="container">
+      <div class="contacts-center-box">
+        <span class="section-subtitle">СВЯЗЬ С НАМИ</span>
+        <h2>КОНТАКТЫ</h2>
+        <div class="contacts-grid-simple">
+          <a href="tel:+79042293336" class="contact-item contact-link-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <span class="contact-label">Телефон / MAX</span>
+              <p>+7 (904) 229-33-36</p>
+            </div>
+          </a>
+          <a href="https://vk.ru/pilates_syktyvkar" target="_blank" class="contact-item contact-link-item">
+            <div class="contact-icon">
+              <img class="vk-icon-wrap" src="images/vk.svg" alt="VK">
+            </div>
+            <div>
+              <span class="contact-label">ВКонтакте</span>
+              <p>pilates_syktyvkar ↗</p>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <span class="contact-label">Адрес студии</span>
+              <p>г. Сыктывкар, ул. Гаражная, 29</p>
+            </div>
+          </div>
+        </div>
+        <!-- Блок с Яндекс картой -->
+        <div class="map-container" style="position:relative;overflow:hidden;">
+          <a href="https://yandex.ru/maps/org/ravnovesiye/19391000981/?utm_medium=mapwidget&utm_source=uniref" style="color:#eee;font-size:12px;position:absolute;top:0px;">Равновесие в Сыктывкаре на карте</a>
+          <iframe src="https://yandex.ru/map-widget/v1/org/ravnovesiye/19391000981/?um=constructor%3A7a147326d97e887f17bfaef28cb619a9d20c38663806a1471387d896918d8e64&amp;z=17" width="100%" height="340" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer-minimal">
+    <div class="container footer-content">
+      <div class="footer-logo">РАВНОВЕСИЕ</div>
+      <div class="footer-socials">
+        <a href="https://vk.ru/pilates_syktyvkar" target="_blank" title="ВКонтакте" class="footer-vk-icon">
+          <img class="vk-icon-wrap" src="images/vk_white.svg" alt="VK">
+        </a>
+        <a href="tel:+79042293336" class="footer-phone-link">+7 (904) 229-33-36</a>
+      </div>
+      <p>© 2026 Пилатес студия. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script>
+    // Мобильное меню
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+    document.querySelectorAll('.mob-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+      });
+    });
+
+    // Лайтбокс для увеличения фотографий в разделе «О студии»
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Карточки цен (Подробнее / Скрыть — независимый аккордеон с сохранением сетки)
+    function toggleDetails(id, btn) {
+      const detailsBlock = document.getElementById(id);
+      const card = btn.closest('.price-card');
+      const actionLinks = card.querySelector('.card-action-links');
+      const isOpen = detailsBlock.classList.contains('open');
+
+      if (isOpen) {
+        detailsBlock.classList.remove('open');
+        actionLinks.classList.remove('active');
+        btn.textContent = "Подробнее";
+      } else {
+        detailsBlock.classList.add('open');
+        actionLinks.classList.add('active');
+        btn.textContent = "Скрыть";
+      }
+    }
+
+    // Автоматическое закрытие всех карточек при полной прокрутке блока вверх или вниз
+    const pricesSection = document.getElementById('directions');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          const openDetails = pricesSection.querySelectorAll('.price-details.open');
+          openDetails.forEach(detail => {
+            detail.classList.remove('open');
+            const card = detail.closest('.price-card');
+            if (card) {
+              const btn = card.querySelector('.btn-card');
+              const links = card.querySelector('.card-action-links');
+              if (btn) btn.textContent = "Подробнее";
+              if (links) links.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, {
+      threshold: 0
+    });
+
+    if (pricesSection) {
+      observer.observe(pricesSection);
+    }
+
+    // Слайдер в блоке «Почему выбирают нас» (с поддержкой свайпа на мобильных и ПК)
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.why-slide');
+    function moveSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    const sliderWrapper = document.getElementById('whySliderWrapper');
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    sliderWrapper.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    sliderWrapper.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, {passive: true});
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        moveSlide(1); // Свайп влево
+      }
+      if (touchEndX > touchStartX + 50) {
+        moveSlide(-1); // Свайп вправо
+      }
+    }
+  </script>
+</body>
+</html>
+
